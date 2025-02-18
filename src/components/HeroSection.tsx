@@ -3,7 +3,7 @@ import { Volume2, Play, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const FeatureCard = ({ icon: Icon, title, className }: { icon: any, title: string, className: string }) => (
-  <div className={`${className} p-6 rounded-lg shadow-md`}>
+  <div className={`${className} p-6 rounded-lg shadow-md transition-transform hover:scale-105`}>
     <div className="flex flex-col items-center text-center space-y-4">
       <Icon className="w-16 h-16" />
       <h3 className="text-sm font-semibold leading-tight">{title}</h3>
@@ -24,7 +24,7 @@ const HeroSection = () => {
             </h1>
             <Link
               to="/select-exam"
-              className="inline-block bg-accent text-white px-8 py-3 rounded-md font-semibold shadow-lg"
+              className="inline-block bg-accent text-white px-8 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors shadow-lg"
             >
               SELECT EXAM
             </Link>
@@ -39,13 +39,13 @@ const HeroSection = () => {
                 className="w-full h-64 object-cover"
               />
               <div className="absolute top-4 right-4 flex space-x-2">
-                <button className="p-2 bg-white rounded-full shadow">
+                <button className="p-2 bg-white rounded-full shadow hover:bg-gray-100">
                   <Volume2 className="w-5 h-5 text-primary" />
                 </button>
-                <button className="p-2 bg-white rounded-full shadow">
+                <button className="p-2 bg-white rounded-full shadow hover:bg-gray-100">
                   <Play className="w-5 h-5 text-primary" />
                 </button>
-                <button className="p-2 bg-white rounded-full shadow">
+                <button className="p-2 bg-white rounded-full shadow hover:bg-gray-100">
                   <Settings className="w-5 h-5 text-primary" />
                 </button>
               </div>
