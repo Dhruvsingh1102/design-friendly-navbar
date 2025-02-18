@@ -38,13 +38,21 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Login Button */}
-          <Link
-            to="/login"
-            className="bg-accent px-6 py-2 rounded-md text-white font-medium text-sm hover:bg-accent-hover transition-colors shadow-lg"
-          >
-            LOGIN
-          </Link>
+          {/* Auth Buttons */}
+          <div className="flex items-center space-x-4">
+            <Link
+              to="/register"
+              className="bg-white text-primary px-6 py-2 rounded-md font-medium text-sm hover:bg-gray-100 transition-colors shadow-lg"
+            >
+              REGISTER
+            </Link>
+            <Link
+              to="/login"
+              className="bg-accent px-6 py-2 rounded-md text-white font-medium text-sm hover:bg-accent-hover transition-colors shadow-lg"
+            >
+              LOGIN
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
